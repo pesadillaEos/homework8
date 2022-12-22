@@ -1,0 +1,91 @@
+@charset 'utf-8';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('./img/windmill.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    font-family: '맑은 고딕', 'Adobe 고딕 Std B';
+}
+a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #283744;
+    line-height: 50px;
+}
+ul {
+    list-style: none;
+    display: none;
+}
+nav {
+    font-size: 1.2em;
+    font-weight: bold;
+    background: #34495e;
+    width: 100%;
+}
+nav ul li {
+    width: 100%;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #576979;
+}
+#trigger {
+    width: 100%;
+    display: block;
+    background: #283744;
+    line-height: 50px;
+    padding-left: 15px;
+    position: relative;
+}
+#trigger::after {
+    content: '';    /* 내용없이 공간확보 */
+    background: url('./img/nav.png') no-repeat;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+
+
+
+
+
+/* 미디어 쿼리 삽입 */
+@media screen and (min-width:721px) {
+    nav {
+        border-bottom: 2px solid #34495e;
+        height: 40px;
+    }
+    nav ul {
+        display: block;
+        text-align: center;
+        padding: 0;
+        height: 40px;
+        width: 720px;
+        margin: 0 auto;
+    }
+    nav ul li {
+        display: inline-block;
+        width: 120px;
+        border-right: 1px solid #576979;
+        border-bottom: 0;
+    }
+    nav ul li:last-child {
+        border-right: 0;
+    }
+    nav ul li a {
+        line-height: 40px;
+        font-size: 1em;
+    }
+    #trigger {
+        display: none;
+    }
+}

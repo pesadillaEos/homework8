@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    display: none;
+    margin: 20px;
+    background: rgba(0,0,0,0.3);
+}
+
+#wrap {
+    border: 10px double black;
+    background: url(img/bg.jpg);
+    background-size: cover;
+    width: 300px;
+    margin: 30px;
+    text-align: center;
+    
+}
+li {
+    list-style: none;
+    padding: 10px;
+    border: 1px solid white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+p {
+    height: 20px;
+    background: rgba(0,0,0,0.7);
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+

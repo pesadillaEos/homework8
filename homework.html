@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compati.ble" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/acocss.css">
+    <script src="js/jquery.js"></script>
+    <title>아코디언 메뉴</title>
+</head>
+<body>
+    <div id="wrap">
+        <div class="pp1">
+            <p class="btn"><a href="#">Breakfast</a>
+                <ul>
+                    <li><a href="#">Fried egg</a></li>
+                    <li><a href="#">Bacon</a></li>
+                    <li><a href="#">Toast</a></li>
+                </ul>
+            </p>
+        </div>
+        <p class="btn"><a href="#">lunch</a>
+            <ul>
+                <li><a href="#">Sandwich</a></li>
+                <li><a href="#">Apple</a></li>
+                <li><a href="#">Maratang</a></li>
+            </ul>
+        </p>
+        <p class="btn"><a href="#">Dinner</a>
+            <ul>
+                <li><a href="#">Bulldack</a></li>
+                <li><a href="#">JockBall</a></li>
+                <li><a href="#">Teokbokki</a></li>
+            </ul>
+        </p>
+    </div>
+    <script>
+        $(function(){
+            $('.btn a').on('click', function(){
+                $('.btn').next('ul').filter(':visible').slideUp();
+
+                $(this).parent().next().slideDown();
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>
